@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1> Portfolio </h1>
+
+            <div id="drop">
+                <p onclick="dropdown()">more...</p>
+            </div>
+
+            <div id="links">
+                <ul>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="https://www.instagram.com/iga_ibragimov/">instagram</a></li>
+                </ul>
+            </div>
+
+        </header>
+
+        <main>
+            <div class="container">
+                
+                <img src="img/me.JPG" alt="" class="foto">
+                
+
+                <h1 class="about"> Ibragimov Shahzod <br>made in 1999 <br> Fullstack developer </h1>
+
+                <p>Skills: <br><br>English - B1 <br> Turkish - C1 <br> Russian - C2 <br> Uzbek - C2 </p>
+
+                <div class="logo">
+                    <p><img src="img/html.png" alt="html" class="icons" onclick="openImage('img/1.png')">Html </p>
+                    <p><img src="img/css.png" alt="css" class="icons" onclick="openImage('img/2.png')"> Css </p>
+                    <p><img src="img/js.png" alt="js" class="icons" onclick="openImage('img/3.png')">Js </p>
+                    <p><img src="img/php.png" alt="php" class="icons" onclick="openImage('img/4.png')">PHP </p>
+                    <p><img src="img/python.png" alt="python" class="icons" onclick="openImage('img/5.png')">Python </p> 
+                    <p><img src="img/django.png" alt="django" class="icons" onclick="openImage('img/6.png')">Django </p>
+                    <p><img src="img/react.png" alt="react" class="icons" onclick="openImage('img/7.png')">React </p>
+                </div>
+            </div>
+        </main>
+
+        <div class="front" onclick="closeFront()" id="imageModal">
+            <div class="front-text">
+                <img id="modalImage">
+            </div>
+        </div>
+
+
+        <div class="web">
+            <a class="develop" href="https://shahzod999.github.io/react-project-andi-tash/"><img src="img/driver.png" alt=""></a>
+            <a class="develop" href="https://shahzod999.github.io/Companion/"><img src="img/companion.png" alt="Turkish"></a>
+            <a class="develop" href="http://shahzod999.pythonanywhere.com">
+                <img src="img/mert.png" alt="Turkish">
+                <img src="img/mert1.png" alt="Turkish">
+                <img src="img/mert2.png" alt="Turkish">
+            </a>
+        </div>
+
+        <footer>
+            <div class="number">
+                <a href="tel:+998910044774">+998 (91) 004 47 74</a>
+            </div>
+            
+            <div class="pages">
+                <a class="github" href="https://t.me/Iga99999">Telegram</a>
+                <a class="github" href="https://github.com/Shahzod999">Github</a>
+            </div>
+            
+            
+        </footer>
+        <script src="index.js"></script>
+    </div>
+</body>
+</html>
