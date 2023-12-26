@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio</title>
+    <link rel="stylesheet" href="about.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <a href="index.html"> &lt; back</a>
+    </header>
+
+    <section>
+        <img class="profile-image" src="img/meAbout.JPG" alt="Моя фотография">
+        
+        <img src="img/rus.png" alt="" onclick="switchLanguage('rus')" style="border: 1px solid rgba(192, 192, 192, 0.3);">
+        <img src="img/usa.png" alt="" onclick="switchLanguage('eng')">
+
+        <div id="rus">
+            <h2>Привет, меня зовут Ибрагимов Шахзод</h2>
+            <p>Расскажу вам немного о себе...</p>
+    
+            <p>Я веб-разработчик в начале пути с малым рюкзаком опыта. Помимо кодинга, я также увлекаюсь физическими упражнениями — это помогает мне чувствовать себя заряженным, готовым покорять больше знаний.</p> 
+            <p>У меня незавершенное высшее образование. В веб-разработке я начал углубляться полтора года назад, и каждый день открываю для себя что-то новое.</p>
+            <p>На этом сайте вы найдете информацию о моих проектах в веб-разработке. Если у вас возникнут вопросы, я всегда буду рад ответить вам!</p>
+    
+        </div>
+            
+
+        <div id="eng" style="display:none;">
+            <h2>Hello, my name is Shahzod Ibragimov</h2>
+            <p>Let me tell you a bit about myself...</p>
+
+            <p>I am a web developer at the beginning of my journey with a modest backpack of experience. In addition to coding, I also have a passion for physical exercises — it helps me feel energized, ready to conquer more knowledge.</p>
+            <p>I have an unfinished higher education. I started delving into web development a year and a half ago, discovering something new every day.</p>
+            <p>On this website, you will find information about my projects in web development. If you have any questions, I will always be happy to answer them!</p>
+        </div>
+
+    </section>
+
+    <script>
+        function switchLanguage(language) {
+        if (language === 'rus') {
+            document.getElementById('rus').style.display = 'block';
+            document.getElementById('eng').style.display = 'none';
+        } else if (language === 'eng') {
+            document.getElementById('rus').style.display = 'none';
+            document.getElementById('eng').style.display = 'block';
+        }
+    }
+    </script>
+</body>
+</html>
