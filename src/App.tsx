@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
+import Paralax from "./components/Paralax/Paralax";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
       </header>
 
       <section id="Me">
-        <div className="container">Me</div>
+        <Paralax />
       </section>
       <section id="Knowledge">
         <div className="container">What I know</div>

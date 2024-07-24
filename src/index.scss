@@ -5,6 +5,7 @@ html {
   // scroll-behavior: smooth;
   background-color: rgb(245 251 255);
   //
+  position: relative;
 }
 * {
   padding: 0;
@@ -16,11 +17,13 @@ html {
 .wrapper {
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden;
 
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 
-  background: no-repeat center/cover url(./me.jpg), rgb(245, 251, 255, 0.6);
+  background: no-repeat center/cover url(./me.jpg), rgb(121, 121, 121, 0.6);
+  // background: no-repeat center/cover url(./me.jpg), rgb(245, 251, 255, 0.6);
   background-blend-mode: overlay;
 
   section {

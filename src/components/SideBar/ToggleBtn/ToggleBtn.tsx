@@ -3,7 +3,7 @@ const ToggleBtn = ({ setOpen, open }) => {
   console.log(open);
 
   return (
-    <button onClick={() => setOpen((prev) => !prev)}>
+    <button onClick={() => setOpen((prev) => !prev)} className="linksButtonHolder">
       <div className={`book  ${open ? "active" : ""}`}>
         <div className="back"></div>
         <div className="page6"></div>
