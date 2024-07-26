@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&family=Rubik+Bubbles&display=swap");
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
   background-color: rgb(245 251 255);
   position: relative;
@@ -21,6 +21,7 @@ section {
   //
   scroll-snap-align: center;
   z-index: 9;
+  position: relative;
 }
 
 .container {

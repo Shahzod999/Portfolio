@@ -1,7 +1,5 @@
 import "./toggleBtn.scss";
 const ToggleBtn = ({ setOpen, open }) => {
-  console.log(open);
-
   return (
     <button onClick={() => setOpen((prev) => !prev)} className="linksButtonHolder">
       <div className={`book  ${open ? "active" : ""}`}>

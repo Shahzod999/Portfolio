@@ -1,6 +1,8 @@
 .paralax {
   position: fixed;
-  background: no-repeat center/cover url(./me.jpg), rgb(121, 121, 121, 0.6);
+  background: no-repeat center/cover url(./me.jpg);
+  // background-color: rgb(121, 121, 121, 0.6) ;
+  // rgb(37 40 47);
   background-blend-mode: overlay;
   top: 0;
   left: 0;
