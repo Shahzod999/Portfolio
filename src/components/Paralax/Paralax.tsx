@@ -10,7 +10,7 @@ const backTextVariants = {
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
-      duration: 50,
+      duration: 70,
     },
   },
 };
@@ -19,11 +19,6 @@ const Paralax = () => {
   return (
     <div className="paralax">
       <motion.div className="overlay-2" variants={backTextVariants} initial="initial" animate="animate"></motion.div>
-
-      <div className="banner-text">
-        <h1>Serenity</h1>
-        <p>Lorem ipsum dolor sit amet...</p>
-      </div>
     </div>
   );
 };

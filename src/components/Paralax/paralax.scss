@@ -1,54 +1,19 @@
-.overlay-2 {
-  position: absolute;
+.paralax {
+  position: fixed;
+  background: no-repeat center/cover url(./me.jpg), rgb(121, 121, 121, 0.6);
+  background-blend-mode: overlay;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 
-  background: url(https://terriotech.com/cloud-overlay.png) 0 100% repeat-x;
-  // -webkit-animation: cloudLoop 80s linear infinite;
-  // animation: cloudLoop 80s linear infinite;
-  z-index: 2;
-  pointer-events: none;
-  height: 80vh;
-  width: 4000px;
-}
-@-webkit-keyframes cloudLoop {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-@keyframes cloudLoop {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0);
+  .overlay-2 {
+    background: url("./cloudOverlay.png") 0 100% repeat-x;
+    z-index: 2;
+    pointer-events: none;
+    height: 80vh;
+    width: 4000px;
   }
 }
 
 //
-.banner-text {
-  position: relative;
-  color: #fff;
-  text-align: center;
-  padding: 10% 0 0 0;
-}
-.banner-text h1 {
-  font-size: 50px;
-  font-family: "Playfair Display", serif;
-}
-.banner-text p {
-  font-family: "Dancing Script", cursive;
-  font-size: 30px;
-}

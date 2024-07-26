@@ -8,9 +8,6 @@ const Navbar = () => {
       <SideBar />
 
       <div className="navbar_wrapper">
-        <motion.span initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
-          logo
-        </motion.span>
         <nav className="navbar_navig">
           <ul>
             <li>
@@ -30,6 +27,10 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
+
+        <motion.span initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="totallTitle">
+          IGA
+        </motion.span>
       </div>
     </div>
   );

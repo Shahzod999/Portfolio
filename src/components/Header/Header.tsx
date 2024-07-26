@@ -54,9 +54,7 @@ const Header = () => {
         </motion.div>
       </div>
 
-      <motion.div className="header__backText" variants={backTextVariants} initial="initial" animate="animate">
-        MERN
-      </motion.div>
+
 
       <div className="headerRight"></div>
     </div>
