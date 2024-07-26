@@ -27,6 +27,7 @@ const textVariants = {
 const backTextVariants = {
   initial: {
     x: 0,
+    opacity: 1,
   },
   animate: {
     x: "-220%",
@@ -34,6 +35,7 @@ const backTextVariants = {
       repeat: Infinity,
       repeatType: "mirror",
       duration: 20,
+      opacity: 0,
     },
   },
 };
@@ -53,7 +55,7 @@ const Header = () => {
       </div>
 
       <motion.div className="header__backText" variants={backTextVariants} initial="initial" animate="animate">
-        Lorem ipsum dolor
+        MERN
       </motion.div>
 
       <div className="headerRight"></div>

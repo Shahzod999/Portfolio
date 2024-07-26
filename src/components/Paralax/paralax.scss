@@ -6,11 +6,12 @@
   bottom: 0;
 
   background: url(https://terriotech.com/cloud-overlay.png) 0 100% repeat-x;
-  -webkit-animation: cloudLoop 80s linear infinite;
-  animation: cloudLoop 80s linear infinite;
+  // -webkit-animation: cloudLoop 80s linear infinite;
+  // animation: cloudLoop 80s linear infinite;
   z-index: 2;
   pointer-events: none;
   height: 80vh;
+  width: 4000px;
 }
 @-webkit-keyframes cloudLoop {
   0% {
