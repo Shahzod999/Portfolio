@@ -12,7 +12,7 @@ const backTextVariants = {
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
-      duration: 70,
+      duration: 500,
     },
   },
 };

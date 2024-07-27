@@ -2,29 +2,71 @@ import { useRef } from "react";
 import "./aboutMe.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const Parallax = ({ type }) => {
+const AboutMe = () => {
+  let arr = [1, 2, 3, 4, 5];
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ["start end", "end start"],
   });
 
-  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  // Примерно 20% расстояния прокрутки для задержки в центре
+  const xLeftBox = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], ["-100%", "0%", "0%", "-100%"]);
+  const xRightBox = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], ["100%", "0%", "0%", "100%"]);
+
+  const yText = useTransform(scrollYProgress, [0, 0.5], ["0%", "200%"]);
+  const rotateText = useTransform(scrollYProgress, [0, 0.5], ["0deg", "90deg"]);
+  const opacityText = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
 
   return (
     <div className="aboutMe" ref={ref}>
-      <motion.h1 style={{ y: yText }}>What We Do?</motion.h1>
-      <motion.div
-        className="planets"
+      <motion.h2
         style={{
-          y: yBg,
+          y: yText,
+          rotate: rotateText,
+          opacity: opacityText,
+          left: "10px",
+          transformOrigin: "left top",
         }}>
-          
-        </motion.div>
+        What We Do?
+      </motion.h2>
+
+      <motion.div
+        style={{
+          x: xLeftBox,
+        }}
+        className="aboutMe__Boxholder">
+        {arr.map((e) => (
+          <div className="aboutMe__Boxholder__Box" key={e}>
+            {e}
+          </div>
+        ))}
+      </motion.div>
+      <motion.div
+        style={{
+          x: xRightBox,
+        }}
+        className="aboutMe__Boxholder">
+        {arr.map((e) => (
+          <div className="aboutMe__Boxholder__Box" key={e}>
+            {e}
+          </div>
+        ))}
+      </motion.div>
+      <motion.div
+        style={{
+          x: xLeftBox,
+        }}
+        className="aboutMe__Boxholder">
+        {arr.map((e) => (
+          <div className="aboutMe__Boxholder__Box" key={e}>
+            {e}
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
 };
 
-export default Parallax;
+export default AboutMe;
