@@ -14,13 +14,15 @@ html {
   margin: 0;
   box-sizing: border-box;
   font-family: "Exo", sans-serif;
+
+  color: white;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
 }
 
 section {
   height: 100vh;
   //
   scroll-snap-align: center;
-  z-index: 9;
   position: relative;
 }
 
