@@ -15,9 +15,9 @@ const AboutMe = () => {
   const xLeftBox = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], ["-100%", "0%", "0%", "-100%"]);
   const xRightBox = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], ["100%", "0%", "0%", "100%"]);
 
-  const yText = useTransform(scrollYProgress, [0, 0.5], ["0%", "200%"]);
+  const yText = useTransform(scrollYProgress, [0, 0.5], ["0%", "100%"]);
   const rotateText = useTransform(scrollYProgress, [0, 0.5], ["0deg", "90deg"]);
-  const opacityText = useTransform(scrollYProgress, [0.8, 1], [1, 0]);
+  const opacityText = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
 
   return (
     <div className="aboutMe" ref={ref}>
