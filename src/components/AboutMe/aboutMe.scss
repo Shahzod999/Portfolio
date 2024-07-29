@@ -1,26 +1,37 @@
 .aboutMe {
-  position: relative;
-  padding: 100px 0;
-
   h2 {
     top: 0;
     position: sticky;
     white-space: nowrap;
-  }
-  h2 {
+    mix-blend-mode: overlay;
     font-size: 100px;
   }
-  &__Boxholder {
-    margin-top: 35px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 35px;
-    align-items: center;
-    justify-content: center;
-    &__Box {
-      width: 200px;
-      height: 250px;
-      border: solid;
+  &__boxholder {
+    margin: auto;
+    backdrop-filter: invert(80%);
+    padding: 3%;
+    border-radius: 1vw;
+    &__text {
+      color: rgb(0, 0, 0);
+      text-align: right;
+      border-bottom: 1px solid;
+      text-transform: uppercase;
+      font-size: 10px;
+      h3 {
+      }
+    }
+    &__box {
+      margin-top: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      align-items: center;
+      justify-content: center;
+      &__item {
+        width: 200px;
+        height: 250px;
+        border: solid;
+      }
     }
   }
 }

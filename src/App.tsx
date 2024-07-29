@@ -2,6 +2,7 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Paralax from "./components/Paralax/Paralax";
+import Skills from "./components/Skills/Skills";
 
 const App = () => {
   return (
@@ -16,15 +17,20 @@ const App = () => {
           </div>
         </section>
       </header>
+      
       <main>
         <section id="Me" className="container">
           <AboutMe />
         </section>
         <section id="Knowledge">
-          <div className="container">What I know</div>
+          <div className="container">
+            <Skills />
+          </div>
         </section>
         <section id="Projects">
-          <div className="container">What I did</div>
+          <div className="container">
+            
+          </div>
         </section>
         <section id="About">
           <div className="container">About Me</div>

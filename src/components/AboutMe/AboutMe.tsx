@@ -1,8 +1,12 @@
 import { useRef } from "react";
+import { useSelector } from "react-redux";
 import "./aboutMe.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { RootState } from "../../app/store";
 
 const AboutMe = () => {
+  const darkMode = useSelector((state: RootState) => state.darkMode.value);
+
   let arr = [1, 2, 3, 4, 5];
   const ref = useRef();
 
@@ -32,39 +36,39 @@ const AboutMe = () => {
         What We Do?
       </motion.h2>
 
-      <motion.div
-        style={{
-          x: xLeftBox,
-        }}
-        className="aboutMe__Boxholder">
-        {arr.map((e) => (
-          <div className="aboutMe__Boxholder__Box" key={e}>
-            {e}
-          </div>
-        ))}
-      </motion.div>
-      <motion.div
-        style={{
-          x: xRightBox,
-        }}
-        className="aboutMe__Boxholder">
-        {arr.map((e) => (
-          <div className="aboutMe__Boxholder__Box" key={e}>
-            {e}
-          </div>
-        ))}
-      </motion.div>
-      <motion.div
-        style={{
-          x: xLeftBox,
-        }}
-        className="aboutMe__Boxholder">
-        {arr.map((e) => (
-          <div className="aboutMe__Boxholder__Box" key={e}>
-            {e}
-          </div>
-        ))}
-      </motion.div>
+      <div className="aboutMe__boxholder">
+        <motion.div
+          style={{
+            x: xLeftBox,
+            color: `${darkMode ? "black" : "white"}`,
+          }}
+          className="aboutMe__boxholder__text">
+          <h3>Empowering Your Business for Rapid Growth</h3>
+        </motion.div>
+
+        <motion.div
+          style={{
+            x: xRightBox,
+          }}
+          className="aboutMe__boxholder__box">
+          {arr.map((e) => (
+            <div className="aboutMe__boxholder__box__item" key={e}>
+              {e}
+            </div>
+          ))}
+        </motion.div>
+        <motion.div
+          style={{
+            x: xLeftBox,
+          }}
+          className="aboutMe__boxholder__box">
+          {arr.map((e) => (
+            <div className="aboutMe__boxholder__box__item" key={e}>
+              {e}
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 };
