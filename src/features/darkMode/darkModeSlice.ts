@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../app/store";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 
 export interface DarkMode {
@@ -20,4 +21,5 @@ export const darkModeSlice = createSlice({
 })
 
 export const { toggleDarkMode } = darkModeSlice.actions
+export const selectedDarkmode = (state: RootState) => state.darkMode.value
 export default darkModeSlice.reducer

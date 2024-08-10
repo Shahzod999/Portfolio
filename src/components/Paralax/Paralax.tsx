@@ -1,7 +1,7 @@
 import "./paralax.scss";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
-import { RootState } from "../../app/store";
+import { selectedDarkmode } from "../../features/darkMode/darkModeSlice";
 
 const backTextVariants = {
   initial: {
@@ -18,7 +18,7 @@ const backTextVariants = {
 };
 
 const Paralax = () => {
-  const darkMode = useSelector((state: RootState) => state.darkMode.value);
+  const darkMode = useSelector(selectedDarkmode);
 
   return (
     <div className="paralax" style={{ backgroundColor: `${darkMode ? "rgb(37, 40, 47)" : "rgb(121, 121, 121, 0.6)"}` }}>

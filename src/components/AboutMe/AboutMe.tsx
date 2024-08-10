@@ -2,10 +2,11 @@ import { useRef } from "react";
 import { useSelector } from "react-redux";
 import "./aboutMe.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { RootState } from "../../app/store";
+import Lightning from "./Lightning";
+import { selectedDarkmode } from "../../features/darkMode/darkModeSlice";
 
 const AboutMe = () => {
-  const darkMode = useSelector((state: RootState) => state.darkMode.value);
+  const darkMode = useSelector(selectedDarkmode);
 
   let arr = [1, 2, 3, 4, 5];
   const ref = useRef();
@@ -23,6 +24,7 @@ const AboutMe = () => {
   const rotateText = useTransform(scrollYProgress, [0, 0.5], ["0deg", "90deg"]);
   const opacityText = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
 
+  const lightningAnimation = useTransform(scrollYProgress, [0.5, 0.6], ["none", "draw 10s ease-in-out forwards"]);
   return (
     <div className="aboutMe" ref={ref}>
       <motion.h2
@@ -36,7 +38,10 @@ const AboutMe = () => {
         What We Do?
       </motion.h2>
 
-      <div className="aboutMe__boxholder">
+      <div className={`${darkMode ? "darkmode" : "daymode"} aboutMe__boxholder`}>
+        <motion.div className="lightning" style={{ animation: lightningAnimation }}>
+          <Lightning />
+        </motion.div>
         <motion.div
           style={{
             x: xLeftBox,

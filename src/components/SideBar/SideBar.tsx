@@ -4,7 +4,7 @@ import Links from "./Links/Links";
 import ToggleBtn from "./ToggleBtn/ToggleBtn";
 import "./sideBar.scss";
 import { useSelector } from "react-redux";
-import { RootState } from "../../app/store";
+import { selectedDarkmode } from "../../features/darkMode/darkModeSlice";
 
 const variants = {
   open: {
@@ -25,7 +25,7 @@ const variants = {
 };
 
 const SideBar = () => {
-  const darkModeSideBar = useSelector((state: RootState) => state.darkMode.value);
+  const darkModeSideBar = useSelector(selectedDarkmode);
   const [open, setOpen] = useState(false);
 
   return (

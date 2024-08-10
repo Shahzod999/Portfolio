@@ -1,2 +1,20 @@
 .skills {
+  height: 100%;
+  // margin-top: 50vh;
+  &__holder {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    &__box {
+      position: relative;
+      width: 80%;
+      height: 500px;
+      background-color: red;
+      border: solid;
+      border-radius: 25px;
+    }
+  }
 }

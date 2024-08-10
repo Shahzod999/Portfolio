@@ -6,7 +6,7 @@ const ToggleBtn = ({ setOpen, open, darkModeSideBar }) => {
     <button onClick={() => setOpen((prev) => !prev)} className="linksButtonHolder">
       <div className={`book  ${open ? "active" : ""}`}>
         <div className={`${darkModeSideBar ? "darkToggle" : "lightToggle"} back`}></div>
-        <div className="page6"></div>
+        <div className="page6">0</div>
         <div className="page5"></div>
         <div className="page4"></div>
         <div className="page3"></div>

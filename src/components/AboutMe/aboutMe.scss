@@ -6,19 +6,45 @@
     mix-blend-mode: overlay;
     font-size: 100px;
   }
+  .daymode {
+    backdrop-filter: invert(1);
+  }
+  .darkmode {
+    backdrop-filter: sepia(1);
+  }
   &__boxholder {
     margin: auto;
-    backdrop-filter: invert(80%);
     padding: 3%;
     border-radius: 1vw;
+    position: relative;
+    .lightning {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+
+      fill: transparent;
+      stroke-width: 1;
+      stroke: rgba(0, 0, 0, 0.5);
+      stroke-dasharray: 25000; /* Периметр окружности */
+      stroke-dashoffset: 25000; /* Начальная позиция рисования */
+      // animation: draw 10s ease-in-out infinite; /* Анимация */
+      overflow: hidden;
+      transform: rotate(15deg) translate(215px, -153px);
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     &__text {
       color: rgb(0, 0, 0);
       text-align: right;
       border-bottom: 1px solid;
       text-transform: uppercase;
       font-size: 10px;
-      h3 {
-      }
     }
     &__box {
       margin-top: 35px;
@@ -33,5 +59,40 @@
         border: solid;
       }
     }
+  }
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 25000;
+  }
+  1% {
+    fill: rgb(255, 255, 255);
+  }
+  1.5% {
+    fill: transparent;
+  }
+  5% {
+    fill: rgb(255, 255, 255);
+  }
+
+  30% {
+    fill: rgb(255, 255, 255);
+  }
+  40% {
+    fill: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    fill: rgb(255, 255, 255);
+  }
+  60% {
+    fill: rgba(255, 255, 255, 0.5);
+  }
+  90% {
+    fill: rgb(255, 255, 255);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: transparent;
   }
 }
