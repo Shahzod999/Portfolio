@@ -1,7 +1,7 @@
 const Lightning = () => {
   return (
     <>
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1957.47 1677.029" enable-background="new 0 0 1957.47 1677.029">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1957.47 1677.029" enableBackground="new 0 0 1957.47 1677.029">
         <path
           d="M1330.795,966.854c2.432-0.478,7.315-1.744,9.4-2.7c0.18-1.94,1.97-2.98,3.09-4.36c2.82-2.97,4.76-7.14,8.91-8.5l1.34,0.9
 	c1.7-1.05,3.68-2.21,5.63-0.93c3.274,1.664,18.273,2.636,21.751,5.619c-0.472-0.527-0.956-1.057-1.411-1.579

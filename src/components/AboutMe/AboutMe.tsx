@@ -35,7 +35,7 @@ const AboutMe = () => {
           left: "10px",
           transformOrigin: "left top",
         }}>
-        What We Do?
+        What i Did?
       </motion.h2>
 
       <div className={`${darkMode ? "darkmode" : "daymode"} aboutMe__boxholder`}>
