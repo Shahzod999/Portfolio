@@ -1,5 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Ruthie&display=swap");
 header {
-  position: relative;
   .header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    h1 {
+      font-family: "Ruthie";
+      font-size: 5vw;
+      letter-spacing: 5px;
+      font-weight: 100;
+      text-shadow: 0 0 20px black;
+    }
+
+    span {
+      text-align: right;
+      text-shadow: 0 0 20px black;
+    }
+  }
+  .scrollButton {
+    text-align: center;
+    a {
+      cursor: pointer;
+      .icon {
+        animation: forwards scrollButton 2s infinite;
+        font-size: 20vh;
+      }
+      :active {
+        cursor: progress;
+      }
+    }
+  }
+}
+@keyframes scrollButton {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
   }
 }

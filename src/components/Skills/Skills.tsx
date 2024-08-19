@@ -4,7 +4,14 @@ import { useRef } from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 const Skills = () => {
-  const arr = [1, 2, 3, 4, 5];
+  const arr = [
+    { numb: 1, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img: "me.jpg" },
+    { numb: 2, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img: "me.jpg" },
+    { numb: 3, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img: "me.jpg" },
+    { numb: 4, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img: "me.jpg" },
+    { numb: 5, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img: "me.jpg" },
+  ];
+
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -15,13 +22,15 @@ const Skills = () => {
     <div className="skills" ref={container}>
       {arr.map((item, index) => {
         const targetScale = 1 - (arr.length - index) * 0.05;
-        return <SkillItem key={index} index={index} item={item} range={[index * 0.25, 1]} targetScale={targetScale} progress={scrollYProgress} />;
+        return <SkillItem key={index} img={item.img} text={item.text} index={index} item={item.numb} range={[index * 0.25, 1]} targetScale={targetScale} progress={scrollYProgress} />;
       })}
     </div>
   );
 };
 
-const SkillItem = ({ index, item, range, targetScale, progress }) => {
+//
+
+const SkillItem = ({ img, text, index, item, range, targetScale, progress }) => {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -38,7 +47,7 @@ const SkillItem = ({ index, item, range, targetScale, progress }) => {
         <h2>{item}</h2>
         <div className="skills__holder__box__textHolder">
           <div className="skills__holder__box__textHolder__text">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.</p>
+            <p>{text}</p>
 
             <span>
               <a href="#" target="_blank">
@@ -50,7 +59,7 @@ const SkillItem = ({ index, item, range, targetScale, progress }) => {
 
           <div className="skills__holder__box__textHolder__img">
             <motion.div style={{ scale: imageScale }}>
-              <img src="me.jpg" alt="" />
+              <img src={img} alt="" />
             </motion.div>
           </div>
         </div>

@@ -56,11 +56,15 @@ const ProjectItems = () => {
 
   return (
     <div ref={container} className="projectItem">
+      {/* 300vh */}
       <div className="sticky">
+        {/* 100vh */}
         {pictures.map(({ src, scale }, index) => {
           return (
             <motion.div key={index} style={{ scale: scale }} className="element">
+              {/* 100% */}
               <div className="imageContainer">
+                {/* 25vh */}
                 <img src={src} alt="" />
               </div>
             </motion.div>

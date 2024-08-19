@@ -75,9 +75,7 @@ const App = () => {
           </div>
         </section>
         <section id="Projects">
-          <div className="container">
-            <Projects />
-          </div>
+          <Projects />
         </section>
         <section id="About">
           <div className="container">About Me</div>

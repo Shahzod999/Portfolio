@@ -32,7 +32,7 @@ const AboutMe = () => {
           y: yText,
           rotate: rotateText,
           opacity: opacityText,
-          left: "10px",
+          left: "100px",
           transformOrigin: "left top",
         }}>
         What i Did?
@@ -42,13 +42,20 @@ const AboutMe = () => {
         <motion.div className="lightning" style={{ animation: lightningAnimation }}>
           <Lightning />
         </motion.div>
-        <motion.div
-          style={{
-            x: xLeftBox,
-            color: `${darkMode ? "black" : "white"}`,
-          }}
-          className="aboutMe__boxholder__text">
-          <h3>Empowering Your Business for Rapid Growth</h3>
+
+        <motion.div className="aboutMe__boxholder__text">
+          <motion.h3
+            style={{
+              x: xRightBox,
+              color: `${darkMode ? "black" : "white"}`,
+            }}>
+            Empowering Your Business for Rapid Growth
+          </motion.h3>
+          <motion.div
+            style={{
+              x: xLeftBox,
+            }}
+            className="aboutMe__boxholder__text__border__bottom"></motion.div>
         </motion.div>
 
         <motion.div

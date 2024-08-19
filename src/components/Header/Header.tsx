@@ -4,7 +4,7 @@ import { RiArrowDownDoubleLine } from "react-icons/ri";
 
 const textVariants = {
   initial: {
-    x: -500,
+    x: 500,
     opacity: 0,
   },
   animate: {
@@ -12,52 +12,24 @@ const textVariants = {
     opacity: 1,
     transition: {
       duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
-};
-const backTextVariants = {
-  initial: {
-    x: 0,
-    opacity: 1,
-  },
-  animate: {
-    x: "-220%",
-    transition: {
-      repeat: Infinity,
-      repeatType: "mirror",
-      duration: 20,
-      opacity: 0,
+      staggerChildren: 1,
     },
   },
 };
 
 const Header = () => {
   return (
-    <div className="header">
-      <div className="headerLeft">
-        <motion.div variants={textVariants} initial="initial" animate="animate">
-          <motion.h2 variants={textVariants}>Пример порт</motion.h2>
-          <motion.span variants={textVariants}>Losrem ipsum dolor sit, amet consectetur adipisicing elit. At, praesentium!</motion.span>
-          <motion.p variants={textVariants}>Losrem ipsum dolor sit, amet consectetur adipisicing elit. At, praesentium!Losrem ipsum dolor sit, amet consectetur adipisicing elit. At, praesentium!</motion.p>
-          <motion.div variants={textVariants} animate="scrollButton">
-            <RiArrowDownDoubleLine className="icon" size={35} />
-          </motion.div>
-        </motion.div>
+    <>
+      <motion.div className="header" variants={textVariants} initial="initial" animate="animate">
+        <motion.h1 variants={textVariants}>Shahzod Ibragimov</motion.h1>
+        <motion.span variants={textVariants}>I am very pleased to tell you about myself</motion.span>
+      </motion.div>
+      <div className="scrollButton">
+        <a href="#Me">
+          <RiArrowDownDoubleLine className="icon" />
+        </a>
       </div>
-
-
-
-      <div className="headerRight"></div>
-    </div>
+    </>
   );
 };
 

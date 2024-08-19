@@ -1,7 +1,8 @@
 .aboutMe {
   h2 {
     top: 0;
-    position: sticky;
+    position: absolute;
+    left: 0;
     white-space: nowrap;
     mix-blend-mode: overlay;
     font-size: 100px;
@@ -29,7 +30,6 @@
       stroke: rgba(0, 0, 0, 0.5);
       stroke-dasharray: 25000; /* Периметр окружности */
       stroke-dashoffset: 25000; /* Начальная позиция рисования */
-      // animation: draw 10s ease-in-out infinite; /* Анимация */
       overflow: hidden;
       transform: rotate(15deg) translate(215px, -153px);
 
@@ -42,9 +42,13 @@
     &__text {
       color: rgb(0, 0, 0);
       text-align: right;
-      border-bottom: 1px solid;
       text-transform: uppercase;
       font-size: 10px;
+      &__border__bottom {
+        height: 2px;
+        background-color: white;
+        border-radius: 10px;
+      }
     }
     &__box {
       margin-top: 35px;
