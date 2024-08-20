@@ -5,11 +5,21 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 
 const Skills = () => {
   const arr = [
-    { numb: 1, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img: "me.jpg" },
-    { numb: 2, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img: "me.jpg" },
-    { numb: 3, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img: "me.jpg" },
-    { numb: 4, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img: "me.jpg" },
-    { numb: 5, text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img: "me.jpg" },
+    { numb: "AutoLider", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img2: "./projects/iPhoneAutoLider.png", img: "./projects/MacbookAutoLider.png" },
+    {
+      numb: "FirebaseMovieApi",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.",
+      img2: "./projects/iPhoneFirebasemovieapi.png",
+      img: "./projects/MacbookFirebasemovieapi.png",
+    },
+    { numb: "Messanger", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img2: "./projects/iPhoneTelegramshoha.png", img: "./projects/MacbookTelegramshoha.png" },
+    {
+      numb: "SRM Restaurant",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.",
+      img2: "./projects/iPhoneSRMrestaurant.png",
+      img: "./projects/MacbookSRMrestaurant.png",
+    },
+    { numb: "EcoMax.uz", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img2: "./projects/iPhoneAutoLider.png", img: "./projects/MacbookEcoMax.png" },
   ];
 
   const container = useRef(null);
@@ -22,7 +32,7 @@ const Skills = () => {
     <div className="skills" ref={container}>
       {arr.map((item, index) => {
         const targetScale = 1 - (arr.length - index) * 0.05;
-        return <SkillItem key={index} img={item.img} text={item.text} index={index} item={item.numb} range={[index * 0.25, 1]} targetScale={targetScale} progress={scrollYProgress} />;
+        return <SkillItem key={index} item={item} index={index} range={[index * 0.25, 1]} targetScale={targetScale} progress={scrollYProgress} />;
       })}
     </div>
   );
@@ -30,7 +40,8 @@ const Skills = () => {
 
 //
 
-const SkillItem = ({ img, text, index, item, range, targetScale, progress }) => {
+const SkillItem = ({ item, index, range, targetScale, progress }) => {
+  const { img, text, numb, img2 } = item;
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -44,10 +55,10 @@ const SkillItem = ({ img, text, index, item, range, targetScale, progress }) => 
   return (
     <div className="skills__holder" key={index} ref={container}>
       <motion.div style={{ scale, top: `calc(-5vh + ${index * 25}px)` }} className="skills__holder__box">
-        <h2>{item}</h2>
+        <h2>{numb}</h2>
         <div className="skills__holder__box__textHolder">
           <div className="skills__holder__box__textHolder__text">
-            <p>{text}</p>
+            <p className="mainHelloText">{text}</p>
 
             <span>
               <a href="#" target="_blank">
@@ -59,7 +70,12 @@ const SkillItem = ({ img, text, index, item, range, targetScale, progress }) => 
 
           <div className="skills__holder__box__textHolder__img">
             <motion.div style={{ scale: imageScale }}>
-              <img src={img} alt="" />
+              <div className="skills__holder__box__textHolder__img__phone">
+                <img src={img2} alt="" />
+              </div>
+              <div className="skills__holder__box__textHolder__img__mac">
+                <img src={img} alt="" />
+              </div>
             </motion.div>
           </div>
         </div>

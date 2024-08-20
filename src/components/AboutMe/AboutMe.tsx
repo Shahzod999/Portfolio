@@ -21,10 +21,10 @@ const AboutMe = () => {
   const xRightBox = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], ["100%", "0%", "0%", "100%"]);
 
   const yText = useTransform(scrollYProgress, [0, 0.5], ["0%", "100%"]);
-  const rotateText = useTransform(scrollYProgress, [0, 0.5], ["0deg", "90deg"]);
+  const rotateText = useTransform(scrollYProgress, [0, 0.4], ["0deg", "90deg"]);
   const opacityText = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
 
-  const lightningAnimation = useTransform(scrollYProgress, [0.5, 0.6], ["none", "draw 10s ease-in-out forwards"]);
+  const lightningAnimation = useTransform(scrollYProgress, [0.3, 0.6], ["none", "draw 10s ease-in-out forwards"]);
   return (
     <div className="aboutMe" ref={ref}>
       <motion.h2
@@ -34,7 +34,8 @@ const AboutMe = () => {
           opacity: opacityText,
           left: "100px",
           transformOrigin: "left top",
-        }}>
+        }}
+        className="mainHelloText">
         What i Did?
       </motion.h2>
 

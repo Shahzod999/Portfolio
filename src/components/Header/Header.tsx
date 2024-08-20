@@ -21,7 +21,9 @@ const Header = () => {
   return (
     <>
       <motion.div className="header" variants={textVariants} initial="initial" animate="animate">
-        <motion.h1 variants={textVariants}>Shahzod Ibragimov</motion.h1>
+        <motion.h1 variants={textVariants} className="mainHelloText">
+          Shahzod Ibragimov
+        </motion.h1>
         <motion.span variants={textVariants}>I am very pleased to tell you about myself</motion.span>
       </motion.div>
       <div className="scrollButton">
