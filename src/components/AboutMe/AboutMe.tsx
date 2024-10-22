@@ -1,13 +1,9 @@
 import { useRef } from "react";
-import { useSelector } from "react-redux";
 import "./aboutMe.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Lightning from "./Lightning";
-import { selectedDarkmode } from "../../features/darkMode/darkModeSlice";
 
 const AboutMe = () => {
-  const darkMode = useSelector(selectedDarkmode);
-
   let arr = [1, 2, 3, 4, 5];
   const ref = useRef();
 
@@ -39,7 +35,7 @@ const AboutMe = () => {
         What i Did?
       </motion.h2>
 
-      <div className={`${darkMode ? "darkmode" : "daymode"} aboutMe__boxholder`}>
+      <div className="aboutMe__boxholder">
         <motion.div className="lightning" style={{ animation: lightningAnimation }}>
           <Lightning />
         </motion.div>
@@ -48,7 +44,7 @@ const AboutMe = () => {
           <motion.h3
             style={{
               x: xRightBox,
-              color: `${darkMode ? "black" : "white"}`,
+              color: "white",
             }}>
             Empowering Your Business for Rapid Growth
           </motion.h3>

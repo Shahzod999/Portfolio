@@ -5,19 +5,19 @@
     left: 0;
     font-size: 100px;
   }
-  .daymode {
-    backdrop-filter: invert(1);
-  }
-  .darkmode {
-    backdrop-filter: sepia(1);
-  }
+  // .daymode {
+  //   backdrop-filter: invert(1);
+  // }
+  // .darkmode {
+  //   backdrop-filter: sepia(1);
+  // }
   &__boxholder {
     margin: auto;
     padding: 3%;
     border-radius: 1vw;
     position: relative;
     .lightning {
-      position: fixed;
+      position: absolute;
       top: 0;
       bottom: 0;
       right: 0;

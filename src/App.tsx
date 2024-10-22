@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
-import Paralax from "./components/Paralax/Paralax";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
+import Neon from "./components/Neon/Neon";
+import { motion } from "framer-motion";
+import Stars from "./components/Stars/Stars";
 
 const App = () => {
   const [isInView, setIsInView] = useState(false);
@@ -16,7 +18,6 @@ const App = () => {
       const knowledgeSection = document.getElementById("Knowledge");
       const knowledgePosition = knowledgeSection.getBoundingClientRect();
 
-      // Определяем, когда пользователь приближается к секции Knowledge
       if (knowledgePosition.top <= window.innerHeight / 2 && knowledgePosition.bottom >= 0) {
         setIsInView(true);
       } else {
@@ -40,8 +41,11 @@ const App = () => {
 
   return (
     <>
-      <Paralax />
-      <motion.div
+      <motion.video
+        src="stars.mp4"
+        autoPlay
+        loop
+        muted
         initial={{ opacity: 0 }}
         animate={controls}
         className="overlay"
@@ -51,36 +55,27 @@ const App = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "black",
           pointerEvents: "none",
+          objectFit: "cover",
         }}
       />
 
-      <header>
-        <section id="Home">
-          <Navbar />
-          <div className="container">
-            <Header />
-          </div>
-        </section>
-      </header>
+      <Header />
 
       <main>
         <section id="Me" className="container">
           <AboutMe />
         </section>
+
         <section id="Knowledge">
-          <div className="container">
-            <Skills />
-          </div>
+          <Skills />
         </section>
+
         <section id="Projects">
           <Projects />
         </section>
-        <section id="About">
-          <div className="container">About Me</div>
-        </section>
       </main>
+
       <section id="Contacts">
         <div className="container">Contacts</div>
       </section>

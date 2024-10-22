@@ -1,16 +1,8 @@
-import { toggleDarkMode } from "../../features/darkMode/darkModeSlice";
 import SideBar from "../SideBar/SideBar";
 import "./navbar.scss";
 import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
 
 const Navbar = () => {
-  const dispatch = useDispatch();
-
-  const toggleDarkModeChange = () => {
-    dispatch(toggleDarkMode());
-  };
-
   return (
     <div className="container navbar">
       <SideBar />
@@ -36,7 +28,7 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        <motion.span initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="totallTitle" onClick={toggleDarkModeChange}>
+        <motion.span initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="totallTitle">
           IGA
         </motion.span>
       </div>

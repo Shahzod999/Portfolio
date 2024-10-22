@@ -1,5 +1,6 @@
 .linksButtonHolder {
   z-index: 99;
+  box-shadow: 0 0 30px 2px rgb(255, 255, 255) !important;
 }
 .book {
   transform-style: preserve-3d;
@@ -105,7 +106,6 @@
   transform: rotateY(-20deg) scale(1.1);
 }
 
-.back,
 .page1,
 .page2,
 .page3,
@@ -113,12 +113,7 @@
 .page5,
 .page6 {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0) !important;
-}
-.darkToggle {
-  box-shadow: 0 0 5px 0 rgb(255, 255, 255) !important;
-}
-.lightToggle {
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0) !important;
+  width: 97%;
 }
 
 button {

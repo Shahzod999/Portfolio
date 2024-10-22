@@ -6,7 +6,7 @@
 html {
   // scroll-snap-type: y proximity;
   scroll-behavior: smooth;
-  background-color: rgb(245 251 255);
+  background-color: rgb(0, 0, 0);
   position: relative;
   overflow-x: hidden;
 }
@@ -46,7 +46,7 @@ li {
 }
 
 .mainHelloText {
-  font-family: "Jersey 10", sans-serif;
+  // font-family: "Jersey 10", sans-serif;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   letter-spacing: 5px;
   position: relative;

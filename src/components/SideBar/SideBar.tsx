@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import Links from "./Links/Links";
 import ToggleBtn from "./ToggleBtn/ToggleBtn";
 import "./sideBar.scss";
-import { useSelector } from "react-redux";
-import { selectedDarkmode } from "../../features/darkMode/darkModeSlice";
 
 const variants = {
   open: {
@@ -25,16 +23,15 @@ const variants = {
 };
 
 const SideBar = () => {
-  const darkModeSideBar = useSelector(selectedDarkmode);
   const [open, setOpen] = useState(false);
 
   return (
     <motion.div className="sideBar" animate={open ? "open" : "closed"}>
-      <motion.div className={`${darkModeSideBar ? "darkSideBar" : "lightSideBar"} linksHolder`} variants={variants}>
+      <motion.div className="linksHolder" variants={variants}>
         <Links />
       </motion.div>
 
-      <ToggleBtn setOpen={setOpen} open={open} darkModeSideBar={darkModeSideBar} />
+      <ToggleBtn setOpen={setOpen} open={open} />
     </motion.div>
   );
 };

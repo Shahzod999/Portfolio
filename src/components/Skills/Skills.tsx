@@ -19,7 +19,13 @@ const Skills = () => {
       img2: "./projects/iPhoneSRMrestaurant.png",
       img: "./projects/MacbookSRMrestaurant.png",
     },
-    { numb: "EcoMax.uz", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img2: "./projects/iPhoneAutoLider.png", img: "./projects/MacbookEcoMax.png" },
+    { numb: "EcoMax.uz", text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.", img2: "./projects/iPhoneEcoMax.png", img: "./projects/MacbookEcoMax.png" },
+    {
+      numb: "Belcore E-Commerce",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem cupiditate amet neque expedita exercitationem consectetur.",
+      img2: "./projects/iPhoneBelcor.png",
+      img: "./projects/MacbookBelcor.png",
+    },
   ];
 
   const container = useRef(null);
@@ -32,7 +38,7 @@ const Skills = () => {
     <div className="skills" ref={container}>
       {arr.map((item, index) => {
         const targetScale = 1 - (arr.length - index) * 0.05;
-        return <SkillItem key={index} item={item} index={index} range={[index * 0.25, 1]} targetScale={targetScale} progress={scrollYProgress} />;
+        return <SkillItem key={index} item={item} index={index} range={[index * 0.2, 1]} targetScale={targetScale} progress={scrollYProgress} />;
       })}
     </div>
   );
